@@ -23,7 +23,7 @@ public class AuthenticationService {
 
   public User register(UserRegisterDTO userRegisterDTO) throws ResponseStatusException {
     if (!userNotRegistered(userRegisterDTO.username()))
-      throw new ResponseStatusException(HttpStatus.CONFLICT, "Username in use");
+      throw new ResponseStatusException(HttpStatus.CONFLICT, "Username already in use");
 
     User user = mapper.userRegisterDtoToUser(userRegisterDTO);
 
