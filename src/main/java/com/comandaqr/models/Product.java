@@ -17,7 +17,7 @@ public class Product {
   @EpochUUID
   private UUID id;
 
-  @ManyToMany(mappedBy = "products", cascade = CascadeType.ALL)
+  @ManyToMany(mappedBy = "products", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
   private List<Order> orders = new ArrayList<>();
 
   @ManyToOne(cascade = CascadeType.ALL)

@@ -17,7 +17,7 @@ public class Order {
   @EpochUUID
   private UUID id;
 
-  @ManyToMany(cascade = CascadeType.ALL)
+  @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
   @JoinTable(
       name = "ordersproductslike",
       joinColumns = @JoinColumn(name = "orderid"),

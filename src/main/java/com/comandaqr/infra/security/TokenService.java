@@ -45,7 +45,7 @@ public class TokenService {
   public User extractUser(String bearerToken) {
     String token = extractJWTToken(bearerToken);
     String subject = extractSubject(token);
-    return userService.findByUsername(subject);
+    return userService.loadUserByUsername(subject);
   }
 
   public String extractSubject(String token) {
