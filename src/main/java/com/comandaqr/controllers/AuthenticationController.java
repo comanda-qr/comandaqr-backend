@@ -26,7 +26,8 @@ public class AuthenticationController {
 
   @PostMapping("/register")
   public ResponseEntity<AuthenticationDTO> register(@RequestBody UserRegisterDTO request) {
-    User user = service.register(request);
+    User user = mapper.userRegisterDtoToUser(request);
+    user = service.register(user);
     String token = tokenService.generateToken(user, true);
     UserDTO userDTO = mapper.userToUserDto(user);
 
@@ -37,7 +38,8 @@ public class AuthenticationController {
 
   @PostMapping("/login")
   public ResponseEntity<AuthenticationDTO> login(@RequestBody UserLoginDTO request) {
-    User user = service.login(request);
+    User user = mapper.userLoginDtoToUser(request);
+    user = service.login(user);
     String token = tokenService.generateToken(user, true);
     UserDTO userDTO = mapper.userToUserDto(user);
 
