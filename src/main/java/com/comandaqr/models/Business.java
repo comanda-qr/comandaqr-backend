@@ -27,5 +27,5 @@ public class Business {
 
   @ManyToOne(cascade = CascadeType.ALL)
   @JoinColumn(name = "userid")
-  private User user;
+  private User owner;
 }

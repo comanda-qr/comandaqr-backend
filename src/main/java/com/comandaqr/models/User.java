@@ -29,6 +29,6 @@ public class User implements UserDetails {
 
   private String name;
 
-  @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+  @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL)
   private List<Business> businesses = new ArrayList<>();
 }
