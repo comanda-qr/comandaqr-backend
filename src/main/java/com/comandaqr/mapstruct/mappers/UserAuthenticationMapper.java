@@ -10,5 +10,5 @@ import org.mapstruct.Mapper;
 public interface UserAuthenticationMapper {
   User userLoginDtoToUser(UserLoginDTO userLoginDTO);
   User userRegisterDtoToUser(UserRegisterDTO userRegisterDTO);
-  UserDTO userToUserDTO(User user);
+  UserDTO userToUserDto(User user);
 }

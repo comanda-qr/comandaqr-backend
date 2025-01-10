@@ -28,7 +28,7 @@ public class AuthenticationController {
   public ResponseEntity<AuthenticationDTO> register(@RequestBody UserRegisterDTO request) {
     User user = service.register(request);
     String token = tokenService.generateToken(user, true);
-    UserDTO userDTO = mapper.userToUserDTO(user);
+    UserDTO userDTO = mapper.userToUserDto(user);
 
     AuthenticationDTO response = new AuthenticationDTO(userDTO, token);
 
@@ -39,7 +39,7 @@ public class AuthenticationController {
   public ResponseEntity<AuthenticationDTO> login(@RequestBody UserLoginDTO request) {
     User user = service.login(request);
     String token = tokenService.generateToken(user, true);
-    UserDTO userDTO = mapper.userToUserDTO(user);
+    UserDTO userDTO = mapper.userToUserDto(user);
 
     AuthenticationDTO response = new AuthenticationDTO(userDTO, token);
 
