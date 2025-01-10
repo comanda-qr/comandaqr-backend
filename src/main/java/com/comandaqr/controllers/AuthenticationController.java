@@ -1,10 +1,10 @@
 package com.comandaqr.controllers;
 
 import com.comandaqr.infra.security.TokenService;
-import com.comandaqr.mapstruct.dto.AuthenticationDTO;
-import com.comandaqr.mapstruct.dto.UserDTO;
-import com.comandaqr.mapstruct.dto.UserLoginDTO;
-import com.comandaqr.mapstruct.dto.UserRegisterDTO;
+import com.comandaqr.mapstruct.dto.user.AuthenticationDTO;
+import com.comandaqr.mapstruct.dto.user.UserDTO;
+import com.comandaqr.mapstruct.dto.user.UserLoginDTO;
+import com.comandaqr.mapstruct.dto.user.UserRegisterDTO;
 import com.comandaqr.mapstruct.mappers.UserAuthenticationMapper;
 import com.comandaqr.models.User;
 import com.comandaqr.services.AuthenticationService;

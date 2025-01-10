@@ -1,8 +1,8 @@
 package com.comandaqr.mapstruct.mappers;
 
-import com.comandaqr.mapstruct.dto.UserDTO;
-import com.comandaqr.mapstruct.dto.UserLoginDTO;
-import com.comandaqr.mapstruct.dto.UserRegisterDTO;
+import com.comandaqr.mapstruct.dto.user.UserDTO;
+import com.comandaqr.mapstruct.dto.user.UserLoginDTO;
+import com.comandaqr.mapstruct.dto.user.UserRegisterDTO;
 import com.comandaqr.models.User;
 import org.mapstruct.Mapper;
 

@@ -1,7 +1,7 @@
 package com.comandaqr.services;
 
-import com.comandaqr.mapstruct.dto.UserLoginDTO;
-import com.comandaqr.mapstruct.dto.UserRegisterDTO;
+import com.comandaqr.mapstruct.dto.user.UserLoginDTO;
+import com.comandaqr.mapstruct.dto.user.UserRegisterDTO;
 import com.comandaqr.mapstruct.mappers.UserAuthenticationMapper;
 import com.comandaqr.models.User;
 import com.comandaqr.repositories.UserRepository;
@@ -34,7 +34,8 @@ public class AuthenticationService {
   }
 
   public User login(UserLoginDTO userLoginDTO) throws ResponseStatusException {
-    var usernamePassword = new UsernamePasswordAuthenticationToken(userLoginDTO.username(), userLoginDTO.password());
+    User user = mapper.userLoginDtoToUser(userLoginDTO);
+    var usernamePassword = new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword());
     var auth = this.authenticationManager.authenticate(usernamePassword);
     return (User) auth.getPrincipal();
   }

@@ -1,4 +1,4 @@
-package com.comandaqr.mapstruct.dto;
+package com.comandaqr.mapstruct.dto.user;
 
 import java.util.UUID;
 
