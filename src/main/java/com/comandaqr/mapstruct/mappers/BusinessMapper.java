@@ -1,5 +1,6 @@
 package com.comandaqr.mapstruct.mappers;
 
+import com.comandaqr.mapstruct.dto.business.BusinessCreateDTO;
 import com.comandaqr.mapstruct.dto.business.BusinessDTO;
 import com.comandaqr.models.Business;
 import org.mapstruct.Mapper;
@@ -8,4 +9,5 @@ import org.mapstruct.Mapper;
 public interface BusinessMapper {
   Business businessDtoToBusiness(BusinessDTO businessDTO);
   BusinessDTO businessToBusinessDto(Business business);
+  Business businessCreateDtoToBusiness(BusinessCreateDTO businessCreateDTO);
 }
